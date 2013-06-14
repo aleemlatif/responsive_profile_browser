@@ -1,0 +1,478 @@
+/*	................................................................
+		author: 	Aleem Latif
+ 		desc: 		CSS rules for Profile Browser 		
+.................................................................. */
+/**
+* Main
+**/
+
+html, body {
+	font-size: 100%;
+	height: 100%;
+	background: none repeat scroll 0 0 #fff;
+}
+html {
+	font-size: 25%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3.5em;
+	line_height: 1.5em;
+	color: #000000;
+}
+a, a:visited, a:focus, a:active {
+	color:#1A5294;
+	text-decoration: underline;
+	outline-style:none;
+	cursor:pointer;
+}
+a:hover {
+	color:#1A5294;
+	text-decoration:none;
+}
+img {
+	border: 0;
+}
+p {
+	line-height: 1.5em;
+	margin: 1em 0 0 0;
+}
+.bold {
+	font-weight: bold;
+}
+.clear {
+	clear:both;
+}
+.italic {
+	font-style: italic
+}
+.hide {
+	display: none;
+}
+.hr {
+	border-bottom:1px solid #d9d9d9;
+	font-size: 0;
+	line-height: 0;
+	margin:10px 0;
+}
+.pointer {
+	cursor: pointer
+}
+.hidden {
+	display:none;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.top {
+	vertical-align: top;
+}
+.middle {
+	vertical-align: middle;
+}
+.bottom {
+	vertical-align: bottom;
+}
+.block {
+	display:block;
+}
+.inline {
+	display: inline;
+}
+/**
+* clearfix -> as explained in http://www.positioniseverything.net/easyclearing.html
+*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline_block;
+}
+/* hides from ie_mac \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/************************************/
+/*	define Responsive page skeleton	*/
+
+#header {
+	width: 100%;
+	overflow: hidden;
+	text-align:center;
+	padding: 0 0 5px 0;
+}
+#content {
+	width: 100%;
+	overflow: hidden;
+}
+/***********************
+	Header - generic
+*/
+#header .header {
+	margin: 0px auto;
+	padding: 15px 0px 0px;
+}
+#header h1 {
+	font-size: 30px;
+	font-weight:bolder;
+	margin-bottom: 10px;
+}
+/***********************
+	Left Menu - generic
+*/
+
+#menu_section {
+}
+#menu_section.menu_section {
+	min-height: 400px;
+	width: 200px;
+	left:1px;
+	float: left;
+	position:relative;	
+}
+ul.left_menu {
+	font-size: 1em;
+	margin-top: 20px;
+	margin-right: -1px;
+	position: relative;
+	z-index: 1000!important;
+	display: block;
+	position:relative;
+}
+ul.left_menu li {
+	display:block;
+	position:relative;
+	background-color: #d2d2d2;
+	border: 1px solid #BBBBBB;
+	margin: -1px 0 0;
+	cursor: pointer;
+	background: linear-gradient(#dddddd, #cccccc) repeat scroll 0 0 #cccccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#cccccc));
+	background-image: -webkit-linear-gradient(#dddddd, #cccccc);
+	background-image: -moz-linear-gradient(#dddddd, #cccccc);
+	background-image: -ms-linear-gradient(#dddddd, #cccccc);
+	background-image: -o-linear-gradient(#dddddd, #cccccc);
+	background-image: linear-gradient(#dddddd, #cccccc);
+}
+ul.left_menu li.first, ul.left_menu li.first a, ul.left_menu li.first a:hover {
+	border-top-left-radius:	10px;
+}
+ul.left_menu li.last {
+	border-bottom-left-radius:	10px;
+}
+ul.left_menu li.active {
+	border-right: medium none;
+	font-weight:bold;
+	margin-right: 0;
+	background-color: #ffffff;
+}
+ul.left_menu li a {
+	display: block;
+	position:relative;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	padding: 7px 10px;
+}
+ul.left_menu li a:hover {
+	background-color: #ffffff;
+}
+ul.left_menu li.active a {
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #000000;
+	cursor:default;
+	font-weight:bold;
+}
+ul.left_menu li.last.active a, ul.left_menu li.last a:hover {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 10px;
+}
+/*********************************
+	Content section - generic
+*/
+#content_section {
+	overflow: hidden;
+}
+#content_section.content_section {
+	float: right;
+	display:block;
+	padding-left: 18px;
+	position:relative;
+	margin-top:5px;
+}
+#content_section .content-wrapper {
+	float: right;
+	border-left: 1px solid #BABABA;
+	padding-left: 18px;
+	position:relative;
+}
+#content_section img {
+	width: 110px;
+	height: auto;
+}
+.img-container {
+	float:left;
+    width: 110px;
+    height: 110px;
+    display: inline-block; /* or you could float them */
+    overflow: hidden;
+	margin: 5px 10px 0 0;
+	border-spacing: 4px;
+	padding: 4px;
+	-moz-box-shadow: 1px 1px 5px #bbb;
+	-webkit-box-shadow: 1px 1px 5px #bbb;
+	box-shadow: 1px 1px 5px #bbb;
+}
+.img-container img {
+    width: 100%;
+}
+#content_section h2 {
+	font-size: 22px;
+	font-weight:bold;
+	padding: 5px 0 10px 0;
+}
+#content_section .biodata {
+	font-weight:normal;
+	text-transform: capitalize;
+	line-height: 1.5em;
+	margin: 1px 0 5px 0;
+}
+#content_section p {
+	margin: 0 0 10px 0;
+}
+#content_section hr {
+	visibility:hidden;
+	padding: 0;
+	margin: 2px 0;
+}
+/**********************
+	Footer - generic
+*/
+#footer {
+	width: 100%;
+	background-color: #ccc;
+	overflow: hidden;
+}
+#footer .footer {
+	width: 970px;
+	margin: 0px auto;
+	padding: 5px 0px;
+	text-align: center;
+}
+
+/******************************************
+	Device screen size specific CSS rules
+*/
+
+/***********************
+	Size > 1200px 
+*/
+ @media screen and (min-width: 1201px) {
+#header .header {
+	width: 970px;
+}
+#content .content {
+	min-height: 400px;
+	width: 970px;
+	margin: 0px auto;
+	padding: 5px 0px;
+}
+#content_section.content_section {
+	min-height: 400px;
+	width: 750px;
+	border-left: 1px solid #BBBBBB;	
+}
+#footer .footer {
+	width: 970px;
+	margin: 0px auto;
+	padding: 5px 0px;
+	text-align: center;
+}
+}
+
+/***************************
+	Size ~ 800px - 1200px 
+*/
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+#header .header {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 0px;
+}
+#content .content {
+	min-height: 400px;
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 0px;
+}
+#menu_section.menu_section {
+	min-height: 400px;
+	width: 25%;
+	float: left;
+	margin-bottom: 10px;	
+}
+#content_section.content_section {
+	float: left;
+	min-height: 400px;
+	padding: 0 1%;
+	width: 72%;
+	border-left: 1px solid #BBBBBB;
+}
+
+#footer .footer {
+	width: 100%;
+	margin: 0px auto;
+	padding: 15px 0px;
+}
+}
+
+/***************************
+	Size ~ 600px - 800px 
+*/
+@media screen and (min-width: 601px) and (max-width: 800px) {
+#header .header {
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 0px;
+}
+#content .content {
+	min-height: 400px;
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 0px;
+}
+#menu_section.menu_section {
+	min-height: 400px;
+	width: 25%;
+	float: left;
+	margin-bottom: 10px;	
+}
+#content_section.content_section {
+	float: left;
+	min-height: 400px;
+	padding: 0 1%;
+	width: 72%;
+	border-left: 1px solid #BBBBBB;
+}
+#footer .footer {
+	width: 100%;
+	margin: 0px auto;
+	padding: 15px 0px;
+}
+}
+
+/*****************************
+	Size ~ 475px - 600px 
+*/
+@media only screen and (min-width:476px) and (max-width: 600px) {
+#header .header {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+#header h1 {
+	margin: 10px 0 0;
+	padding:0;
+}
+#content .content {
+	min-height: 300px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+#menu_section.menu_section {
+	min-height: 150px;
+	width: 100%;
+	margin: 0 0 5px 0;
+}
+ul.left_menu {
+	margin-top: 5px;
+}
+ul.left_menu li.first, ul.left_menu li.first a, ul.left_menu li.first a:hover, ul.left_menu li.last, ul.left_menu li.last a, ul.left_menu li.last a:hover, ul.left_menu li.active, ul.left_menu li.active a, ul.left_menu li.active a:hover, ul.left_menu li.last.active, ul.left_menu li.last.active a, ul.left_menu li.last.active a:hover {
+	border-radius: 0;
+}
+ul.left_menu li.last.active, ul.left_menu li.last.active a, ul.left_menu li.last.active a:hover {
+	border-width: 0px;
+}
+#content_section.content_section {
+	min-height: 150px;
+	width: 96%;
+	padding: 0 2% 0 2%;
+	margin:0;
+	border: none;
+	float:none;
+	background-color:#fff;
+}
+#content_section h2 {
+	display:none;
+}
+#footer .footer {
+	width: 100%;
+	margin: 0 auto;
+	padding: 3px 0px;
+}
+}
+
+/************************************
+	Size ~ 0px - 475px [mobile devices] 
+*/
+@media only screen and (min-width: 0px) and (max-width: 475px) {
+#header .header {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+#header h1 {
+	margin: 10px 0 0;
+	padding:0;
+}
+#content .content {
+	min-height: 300px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+#menu_section.menu_section {
+	min-height: 150px;
+	width: 100%;
+	margin: 0 0 5px 0;
+}
+ul.left_menu {
+	margin-top: 5px;
+}
+ul.left_menu li.first, ul.left_menu li.first a, ul.left_menu li.first a:hover, ul.left_menu li.last, ul.left_menu li.last a, ul.left_menu li.last a:hover, ul.left_menu li.active, ul.left_menu li.active a, ul.left_menu li.active a:hover, ul.left_menu li.last.active, ul.left_menu li.last.active a, ul.left_menu li.last.active a:hover {
+	border-radius: 0;
+}
+ul.left_menu li.last.active, ul.left_menu li.last.active a, ul.left_menu li.last.active a:hover {
+	border-width: 0px;
+}
+#content_section.content_section {
+	min-height: 150px;
+	width: 96%;
+	padding: 0 2% 0 2%;
+	margin:0;
+	border: none;
+	float:none;
+	background-color:#fff;
+}
+#content_section h2 {
+	display:none;
+}
+#footer .footer {
+	width: 100%;
+	margin: 0 auto;
+	padding: 3px 0px;
+}
+}
